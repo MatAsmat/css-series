@@ -1,0 +1,47 @@
+<!-- ตอนที่19 การใช้ (Align) -->
+ Center Align Elements : text , image 
+ Left and Right Align - Using position 
+ Center Vertically - Using padding แนวตั้ง 
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title></title>
+    <style>
+        /* สร้างกรอบ div */
+        /* Center Align Elements : text , image */
+        div {
+            width: 400px;
+            height: 150px;
+            border: 2px solid green;
+            /* ให้อยู่กึ่งกลาง auto หรือ 0 auto */
+            margin: 0 auto;
+            text-align: center;
+            /* Vertically */
+            padding: 50px 0;
+        }
+        img {
+            display: block;
+            margin: auto;
+            width: 40%;
+        }
+        /* Left and Right Align - Using position */
+        div.right {
+            /* ขยับไปยูทางขวา ปกติอยู่ตรงกลาง */
+            position: absolute;
+            /* ชิดขวา ชิดขอบ */
+            right: 0px;
+            /* กำหนดความกว้าง */
+            width: 300px;
+            /* เส้นขอบหนาขึ้น */
+            border: 3px solid #73AD21;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- ข้อความให้อยู่ตรงกลาง -->
+    <div>Asmat</div>
+    <!-- รูปภาพให้อยู่ตรงกลาง -->
+    <img src="img/nt.jpg" alt="">
+    <div class="right">
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+</body>
+</html>

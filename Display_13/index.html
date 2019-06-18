@@ -1,0 +1,53 @@
+<!-- ตอนที่13 การใช้งาน (Display) -->
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><title></title>
+    <style>
+        h1 {
+            background: red;
+            /* h1 จะหายไป */
+            display: none;
+        }
+        span, a {
+            background: green;
+        }
+        li {
+            /* ปกติจะเป็น block จะมีจุดอยู่หน้าข้อความ 
+            เปลี่ยนเป็น Inline จะเรียงอยู่บรรทัดเดียวแล้วจุดจะหายไป */
+            display: inline;
+        }
+        span.block {
+            /* ให้อยู่ทีละบรรทัด */
+            display: block;
+        }
+        h2 {
+            /* ข้อความจะมองไม่เห็น แต่มีอยู่ */
+            display: none;
+        }
+        h3 {
+            /* ข้อความจะมีปกติ */
+            display: hidden;
+        }
+    </style>
+</head>
+<body>
+    *The display Property: -disply:none, -display: block
+    <!-- สีพื้นหลังตัวอักษรจะยาวเป็นแถวเต็มหน้า -->
+    block-lavel-elements : <div>,<h1>-<h6>,<p>,<form>,<header>,<footer>,<section>
+    <!-- จะอยู่บรรทัดเดียวและต่อกันสีพื้นหลังตัวอักษรจะมีขนาดเท่าตัวอักษรที่มี -->
+    inline Elements      : <span>,<a>,<img>
+    <!-- เปลี่ยนจากจุดทีละบรรทัดให้จุดหายแล้วอยู่บรรทัดเดียวกัน -->
+    Overrride The Default Display Value: <li>
+    <!-- การซ่อนของข้อความ -->
+    *visibility: -display: none, -display: hidden
+    <h1>block-lavel-elements</h1>
+    <span>inline Elements</span><a href="#">inline Elements</a>
+    <ul>
+        <li>Overrride</li>
+        <li>ให้เป็น</li>
+        <li>Inline</li>
+    </ul>
+    <span class="block">Lorem ipsum dolor sit amet.</span><span>Lorem ipsum dolor sit amet.</span>
+    <h2>visibility => none</h2>
+    <h3>visibility => hidden</h3>
+</body>
+</html>

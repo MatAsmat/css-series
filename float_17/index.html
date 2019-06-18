@@ -1,0 +1,75 @@
+<!-- ตอนที่17 การใช้งาน (Float) และการจัดการ (Layout) -->
+float ลอย : left, right, none, inherit
+The clear Property : none, left, right, both, inherit 
+The clearfix Hack : without, with
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title></title>
+    <style>
+        /* float */
+        img.f {
+            /* -----float------- */
+            width: 150px;
+            height: 150px;
+            /* รูปภาพจะอยู่ทางซ้ายของข้อความ */
+            float: left;
+        }
+        p {
+            /* กำหนดให้ข้อความตามรูปภาพไปด้วย เพื่อป้องกันการเพี้ยน */
+            float: left;
+        }
+        /* clear */
+        /* ถ้ายังไม่มีการเคลียร์ layout มันเพี้ยน */
+        .clear1 {
+            width: 500px;
+            height: 1000px;
+            background: red;
+            float: left;
+        }
+        .clear2 {
+            width: 500px;
+            height: 1000px;
+            background: green;
+            float: right;
+        }
+        footer.clear {
+            /* การแก้ layout เมื่อมีการทำ footer */
+            clear: both;
+            /* เต็มหน้าจอทางยาว */
+            width: 100%;
+            height: 30px;
+            background: #333;
+        }
+        /* ------clearfix---- */
+        /* แบบที่ 1 */
+        img.cf {
+            width: 150px;
+            height: 150px;
+            float: right;
+        }
+        div.clearfix {
+            width: 300px;
+            border: 1px solid red;
+            /* การแก้ข้อความกับรูปภาพให้อยู่ในกรอบเดียว */
+            overflow: auto;
+        }
+        /* แบบที่ 2 */
+        div::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
+</head>
+<body>
+    <div class="float">
+        <img class="f" src="img/nt.jpg" alt=""> 
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea necessitatibus qui autem modi, soluta atque sint, minima saepe, in ad distinctio. Repudiandae ipsam est unde consequuntur ad adipisci, distinctio dolor?</p>
+    </div>
+    <div class="clear1"></div>
+    <div class="clear2"></div>
+    <footer class="clear"></footer>
+    <div class="clearfix">
+        <p>Lorem5 ipsum dolor sit amet.</p>
+        <img class="cf" src="img/nt.jpg" alt="">
+    </div>
+</body>
+</html>

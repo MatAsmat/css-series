@@ -1,0 +1,44 @@
+<!-- ตอนที่21 การใช้งาน Pseudo-class และ Pseudo-element -->
+Pseudo-class = :
+Pseudo-element = :: after, before, first-letter,
+                    first-line, selection
+-เวลาเอาเมาส์ไปวางแล้วปุ่มจะเปลี่ยนสี
+-ไปหน้าอื่นแล้วปุ่มจะเปลี่ยนสี
+-เมื่อคลิ๊กปุ่มจะเปลี่ยนสี
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title></title>
+    <style>
+        /* unvisited link */
+        a:link {
+            color: red;
+        }
+        /* visited link */
+        a:visited {
+            color: antiquewhite;
+        }
+        /* mouse over link */
+        a:hover {
+            color: aquamarine;
+        }
+        /* selected link */
+        a:active {
+            color: brown;
+        }
+        /* ------------------ */
+        /* สีเฉพาะบันทัดแรก */
+        p.li::first-line {
+            color: aqua;
+            font-variant: small-caps;
+        }
+        /* สี ขนาดตัวอักษร เฉพาะตัวแรก */
+        p.le::first-letter {
+            color: blue;
+            font-size: xx-large;
+        }
+    </style>
+</head>
+<body>
+    <a href="#">link</a>
+    <p class="li">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique omnis repellendus quidem, voluptatibus id quod dolore eius nesciunt consequuntur voluptas sed, quia pariatur minima dignissimos sunt nobis laborum accusamus voluptatem.</p>
+    <p class="le">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique omnis repellendus quidem, voluptatibus id quod dolore eius nesciunt consequuntur voluptas sed, quia pariatur minima dignissimos sunt nobis laborum accusamus voluptatem.</p>
+</body>
+</html>

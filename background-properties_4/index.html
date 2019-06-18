@@ -1,0 +1,25 @@
+<!-- ตอนที่4 การใช้งาน (Background Properties) -->
+การใส่รูปต้องมีอยู่ใน folder เดียวกัน หรือ file เดียวกัน
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+    <title>CSS</title>
+    <style>
+        body {
+            /* สีพื้นหลัง กับรูปภาพไม่ซ้ำ อยู่ตรงกลาง */
+            background: rgb(219, 210, 209) url(img/cd.jpg) no-repeat center center;
+            /* --------- */
+           /* รูปภาพจะซ้ำ เพราะไม่ได้กำหนด no-repeat */
+            background-color: blue;
+            background-image: url(img/cd.jpg);
+            /* --------- */
+            background-repeat: no-repeat;
+            background-repeat: repeat-x;
+            background-repeat: repeat-y; 
+            /* --------- */
+            background-attachment: fixed; 
+            background-position: center bottom; 
+    </style>
+</head>
+<body>
+ /* --------------- */
+</body>
+</html>

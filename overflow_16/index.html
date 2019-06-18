@@ -1,0 +1,31 @@
+<!-- ตอนที่16 การใช้งาน (Overflow) -->
+Overfolow : visible, hidden, scroll, auto
+ข้อความปกติจะเลยสีพื้นหลัง, จะตัดข้อความส่วนที่เกินจากสีพื้นหลัง,
+เลื่อน ขึ้น ลง ซ้าย ขวา ดูข้อความได้ทั้งหมด, เลื่อนลงเฉพาะขึ้น ลง  
+Overflow-x , -y
+แนวนอน แนวตั้ง
+<!DOCTYPE html><html></html><head><meta charset="UTF-8"> <title></title>
+    <style>
+        div.nm {
+            /* visible */
+            width: 150px;
+            height: 150px;
+            background: yellow;
+            /* visible, hidden, scroll, auto*/
+            overflow: auto;
+        }
+        div.xy {
+            width: 150px;
+            height: 150px;
+            background: rgb(255, 0, 0);
+            /* (x, y) */
+            overflow-x: hidden;
+            overflow-y: scroll;
+        }
+    </style>
+</head>
+<body>
+    <div class="nm">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis commodi numquam rerum, vero explicabo vel tempora accusamus aliquid corporis, debitis repellat cumque doloribus corrupti culpa in eius, similique laboriosam delectus?</div>
+    <div class="xy">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis commodi numquam rerum, vero explicabo vel tempora accusamus aliquid corporis, debitis repellat cumque doloribus corrupti culpa in eius, similique laboriosam delectus?</div>
+</body>
+</html>

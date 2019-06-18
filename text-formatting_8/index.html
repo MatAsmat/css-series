@@ -1,0 +1,61 @@
+<!-- ตอนที่8 การทำงานกับตัวอักษร (Text Formatting) -->
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><title></title>
+    <style>
+        h1 {
+            /* ตำแหน่งของตัวอักษร center left right */
+            text-align: center;
+        }
+        h2 {
+            /* ข้อความยาวๆ จะชิดทั้งหน้า ทั้งหลัง */
+            text-align: justify;
+        }
+        a {
+            /* ตัวขีดเส้นใต้ข้อความลิงค์จะหายไป */
+            /* นอกจาก none จะมี overline, line-through, underline */
+            text-decoration: none;
+        }
+        p.uppercase {
+            /* รูปแบบตัวอักษร จะมี uppercase=ตัวอักษรใหญ่ทั้งหมด
+            , lowercase=เล็กทั้งหมด, capitalize=ใหญ่แค่ตัวแรก */
+            text-transform: capitalize;
+        }
+        p {
+            /* ย่อหน้าข้อความบรรทัดแรก */
+            text-indent: 50px;
+        }
+        h3 {
+            /* ความห่างระหว่างตัวอักษร */
+            letter-spacing: 3px;
+        }
+        p.small {
+            /* ความห่างระหว่างแถว */
+            line-height: 0.8;
+        }
+        p.ex1 {
+            direction: rtl;
+        }
+        h4 {
+            /* ความห่างระหว่างคำ */
+            word-spacing: 10px;
+        }
+        h5 {
+            /* เงาของข้อความ x, y */
+            text-shadow: 3px 2px red;
+        }
+    </style>
+</head>
+<body>
+    text color -color name, -HEX value, -RGB value
+    <h1>Text Alignment</h1>
+    <h2>Text justify</h2>
+    <a href="#">Text Decoration</a>
+    <p class="uppercase">Text Transform</p>
+    <p>Text-Indent</p>
+    <h3>Letter Spacing1</h3>
+    <p class="small">Line Height</p>
+    <p class="ex1"><bdo dir="rtl">Text Direction</bdo></p>
+    <h4>Word Spacing</h4>
+    <h5>Text Shadow</h5>
+</body>
+</html>

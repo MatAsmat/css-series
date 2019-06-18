@@ -1,0 +1,55 @@
+<!-- ตอนที่11 การตกแต่งลิงค์ให้สวยงาม (Styling Links) -->
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title></title>
+    <style>
+        body {
+            /* ความกว้างระหว่างกรอบกับข้อความ */
+            padding: 20px
+        }
+        a {
+        /* text-decoration */
+        /* ไม่ขีดเส้นใต้ */
+            text-decoration: none;
+            /* กรอบ */
+            border: 2px solid green;
+            /* ความกว้างระหว่างกรอบกับข้อความ */
+            padding: 10px;
+            /* สีข้อความ */
+            color: green; 
+            /* animation ความเร็วช้าเมื่อวางเมาส์ */
+            transition:all 0.5s;
+        }
+        /* unvisited link */
+        /* เมื่อมีการวางเมาส์ปุ่มจะเปลี่ยนสี */
+        a:hover {
+            /* background-color */
+            background: green;
+            color: #fff;
+        }
+        /* --------------- */
+        a:link, a:visited {
+            background-color: #f44336;
+            color: white;
+            padding: 14px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.5s;
+            box-shadow: 3px 4px 5px rgb(170,170,170);
+        }
+        /* วาง คลิ๊ก */
+        a:hover, a:active {
+            box-shadow: 3px 4px 5px rgb(114, 114, 114);
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    link :
+    a:link = ปกติ
+    a:visited = พอกดเข้าไปแล้วลิงค์จะเปลี่ยนสี
+    a:hover = เอาเมาส์ไปชี้สีจะเปลี่ยน
+    a:active = เมือเราคลิ๊กค้างรูปแบบจะเปลี่ยน
+    <a href="#">Link</a>
+    <a href="defaukt.asp" target="_blank">This is a link</a>
+</body>
+</html>

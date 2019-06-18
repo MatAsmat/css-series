@@ -1,0 +1,51 @@
+<!-- ตอนที่20 อธิบายการทำงานของ CSS Combinators -->
+descendant selector (space)
+child selector (>) ปกติใช้มากกว่า
+adjacent sibling selector (+)
+general sibling seletor (~)
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title></title>
+    <style>
+        /* เลือก tag P ทั้งหมด*/
+        div.descendant p {
+            background: red;
+        }
+        /* เอาเฉพาะ tag P เดียวๆเท่านั้น  */
+        div.child > p {
+            background: yellow;
+        }
+        /* ไม่เอาใน div แต่จะเอาตัวที่ถัดจาก div แค่บรรทัดเดียวเท่านั้น */
+        div.adjacent + p {
+            background: tomato;
+        }
+        /* ก่อน div, ใน div ไม่เลือก เลือกทั้งหมดหลังจาก div */
+        div.general ~ p {
+            background: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="descendant">
+        <p>เลือก</p>
+        <span><p>เลือก</p></span>
+    </div>
+    <P>ไม่เลือก</P>
+    <!-- -------------------     -->
+    <div class="child">
+        <p>เลือก</p>
+        <span><p>ไม่เลือก</p></span>
+    </div>
+    <p>ไม่เลือก</p>
+    <!-- -------------- -->
+    <div class="adjacent">
+        <p>ไม่เลือก</p>
+    </div>
+    <p>เลือก</p>
+    <p>ไม่เลือก</p>
+    <!-- ------------ -->
+    <p>ไม่เลือก</p>
+    <div class="general">
+        <p>ไม่เลือก</p>
+    </div>
+    <p>เลือก</p>
+</body>
+</html>

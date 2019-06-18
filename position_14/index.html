@@ -1,0 +1,84 @@
+<!-- ตอนที่14 การกำหนดตำแหน่งด้วย (Position) -->
+ค่าเริ่มต้นปกติ, ขยับหรือเลื่อนรูปแบบให้แตกต่าง, เมื่อเลื่อนสกอกล่องที่เราฟิกจะอยู่ที่เดิม,
+relativeกับabsoluteจะอยู่ด้วยกัน, เมื่อเลื่อนสกอจะอยู่ขอบบนตลอด
+The position Property: (static, relative, fixed, absolute, sticky)
+overlapping Elements : z-index: (1, -1)(หน้าข้อความ, หลังข้อความ);
+position Text In an Image: ข้อความบนรูปภาพ ใช้ position: relativeกับabsolute
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title></title>
+    <style>
+        /* relative */
+        div {
+            width: 100px;
+            height: 100px;
+            background: red;
+            position: relative;
+            top: 10px;
+            left: 10px;
+        } 
+        span {
+            /* พื้นหลังเท่ากับคำ */
+            background: green;
+        }
+         /* fixed */
+        span:nth-child(1) {
+            top: 50px;
+            position:fixed;
+        }
+        /* relative */
+        /* sodo class บรรทัดที่2 */
+        span:nth-child(2) {
+            position: relative;
+            top: 5px;
+            left: 10px;
+        }
+        /* absolute = การทำให้สองอย่างเป็นสิ่งเดียวกัน*/
+        div.pf {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 2px solid #333;
+            position: relative;
+        }
+        img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+        }
+        .noti {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: yellow;
+            text-align: center;
+            color: blue;
+            position: absolute;
+            right: 0;
+        }
+        h1 {
+            margin: 0;
+            padding-top: 7px;
+        }
+        /* sticky */
+        p {
+            top: 0;
+            position: sticky;
+        }
+    </style>
+</head>
+<body>
+    <div>relative</div>
+    <!-- span แบบนี้ปกติจะเป็นแบบ inline -->
+    <span>relative</span>
+    <!-- แต่ถ้าจะขยับบรรดทัดที่2 -->
+    <span>relative</span>
+    <span>relative</span>
+    <!-- fixed -->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem eum consequuntur nam voluptatibus quae numquam porro quam cum. Molestias laudantium maiores doloremque, id itaque, debitis porro eius velit non enim ullam placeat iusto nemo delectus quo mollitia neque a? Repellat, sapiente animi perferendis et voluptates aliquid corrupti nulla ea voluptate nihil quasi ut labore debitis explicabo repudiandae quas error dolores placeat neque! Laboriosam aut temporibus impedit iste! Ea, architecto necessitatibus id assumenda adipisci odit illo odio in eveniet ducimus numquam nam magnam corrupti, aut optio deleniti obcaecati quos? Ipsa impedit quisquam consectetur adipisci deleniti eaque est, obcaecati nisi accusantium officia?Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias at ab autem debitis illum ipsam ex quibusdam obcaecati, porro iusto!Lorem ipsum dolor sit amet.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt delectus nisi odit iusto eum, aperiam atque rem pariatur veniam asperiores ea ducimus fugit? Tempore dolorum aperiam fuga iste. Ipsum, excepturi.</p>
+    <!-- absolute -->
+    <div class="pf">
+        <div class="noti"><h1>1</h1></div>
+        <img src="img/nt.jpg" alt="">
+    </div>
+    <p>I'm sticky</p>
+</body>
+</html>

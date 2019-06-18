@@ -1,0 +1,27 @@
+<!-- ตอนที่5 การใช้งาน (Border) -->
+CSS Border Properties
+dotted  =  เส้นจุด                      ,dashed  =  เส้นปะ
+solid   =  เส้นขอบ                     ,double  =  เส้นขอบคู่
+groove  =  เส้นกรอบดำนอกเทาใน           ,ridge  =  เส้นกรอบเทานอกดำใน
+inset   =  เส้นกรอบดำซ้ายบนเทาขวาล่าง     ,outset =  เส้นไล่สี
+none    =  ไม่มีเส้น                      ,hidden =  ไม่มีเส้น
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title>CSS3</title><style>
+        h1 {
+            /* กำหนดในบรรทัดเดียว */
+            border: 5px solid rgb(128, 17, 32); 
+            /* กำหนดเส้นโค้ง */
+            border-radius: 1px;   
+            /* กำหนดเส้นเหมือนกัน */
+            border-style: ridge;
+            /* กำหนดเส้นหลายแบบ */
+            border-top-style: dashed;
+            border-right-style: solid;
+            border-left-style: solid;
+            border-bottom-style: dashed;
+            /* กำหนดเส้นเดียว */
+            border-bottom: 1px solid #123;
+        }
+    </style></head><body>
+    <h1>CSS Border Properties</h1>
+</body>
+</html>

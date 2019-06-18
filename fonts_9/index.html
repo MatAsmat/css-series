@@ -1,0 +1,53 @@
+<!-- ตอนที่9 การใช้ฟอนต์ (Fonts) -->
+<!DOCTYPE html><html ><head><meta charset="UTF-8">
+    <title>CSS3</title>
+    <!-- คัดลอก link font ใต้ title -->
+    <link href="https://fonts.googleapis.com/cs?family=Kanit&display=swap" rel="stylesheet">
+    <style>
+        p {
+            /* เอาตัวอักษรกับลิงค์จาก google fonts */
+            font-family: 'Kanit', sans-serif;
+            /* ขนาดของตัวอักษร */
+            font-size: 10px;
+            /* Set Font Size With Em การคำนวณ  */
+            /* 40px/16=2.5em | 16 คือ ขนาดมารตฐาน*/
+            font-size: 2.5em;
+        }
+        body {
+            font-size: 100%;
+        }
+         h1 {
+            font-size: 2.5em;
+        }
+        p.italic {
+            /* กำหนดเอง */
+            font-style: italic;
+        }
+        p.thk {
+            /* ความหนาของตัวอักษร */
+            font-weight: 900;
+        }
+        p.small {
+            /* คนไม่ค่อยนิยมใช้ จะมี normal กับ small caps */
+            font-variant: small-caps;
+        }
+    </style>
+</head>
+<body>
+<!-- font สวยๆ => Google Fonts => Kanit -->
+<!-- font มี 2 ประเภท คือ Sans-serif= ตัวอักษรธรรมดา กับ Serif=ตัวอักษรมีหาง -->
+Serif => Time New Roman, Georgia
+Sans-serif => Arial, Verdana
+Monospace => Courier New, Lucida Console     
+<p>โปรแกรมมิ่ง</p>
+<p class="normol">ธรรมดา</p>
+<p class="italic">เอียงคนนิยมใช้</p>
+<p class="oblique">เอียง</p>
+<h1>font size em</h1>
+<p class="nm">normal</p>
+<p class="li">lighter</p>
+<p class="th">thick</p>
+<p class="thk">thicker</p>
+<p class="small">variant</p>
+</body>
+</html>
